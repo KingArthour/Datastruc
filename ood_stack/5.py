@@ -64,3 +64,52 @@ ls = [e for e in input("Enter max of car,car in soi,operation : ").split(' ')]
 s = Stack()  
 
 s.jod_rod(ls)
+
+
+
+##################
+ที่จอดรถของนาย ก เป็นส่วนที่แรเงาสีฟ้า ส่วนสีแดงเป็นที่ของนาย ข ซี่งเป็นญาติกัน ที่จอดรถของนาย ก และ นาย ข แคบมาก จอดรถได้เรียงเดี่ยว นาย ข ไม่ได้ใช้ที่จอดรถ แต่ อนุญาติให้นาย ก ใช้ที่จอดรถของเขาได้โดยไม่จอดรถแช่ไว้ เนื่องจากซอยแคบ ดังนั้นการมาจอด (arrive) และการรับรถ (depart)จะเป็นลักษณะของ stack เงื่อนไขคือ ในการรับรถ x ใดๆอยากให้ลำดับรถเป็นเหมือนเดิม ดังรูป simulate การจอดรถในที่จอดรถของนาย ก โดยใช้ operation ของ stack ข้างล่างเป็นตัวอย่าง output
+
+การรับ input : รับ input 4 ค่าใน 1 บรรทัดโดยให้แยกโดย " " (space bar) โดยตำแหน่งแรกคือ จำนวนสูงสุดที่รถสามารถจอดได้ในซอยของ นาย ก ตำแหน่งที่สองคือ รถที่จอดอยู่ในซอยของ นาย ก ตำแหน่งที่สามคือ การกระทำเช่น ถ้าเป็น arrive จะทำการเพิ่มรถในซอย ส่วน depart จะทำการเอารถออกจากซอย โดยรถที่จะทำการเพิ่มหรือนำออกนั้นจะเป็น เลขในตำแหน่งที่ 4
+
+***หมายเหตุ ถ้าในซอยไม่มีรถอยู่เลยให้ input = 0 ในตำแหน่งที่ 2***
+
+
+
+******** Parking Lot ********
+Enter max of car,car in soi,operation : 5 1,2,3,4 arrive 5
+car 5 arrive! : Add Car 5
+[1, 2, 3, 4, 5]
+
+
+******** Parking Lot ********
+Enter max of car,car in soi,operation : 4 1,2,3,4 arrive 5
+car 5 cannot arrive : Soi Full
+[1, 2, 3, 4]
+
+
+******** Parking Lot ********
+Enter max of car,car in soi,operation : 8 1,4,6,2,3,5,8 arrive 7
+car 7 arrive! : Add Car 7
+[1, 4, 6, 2, 3, 5, 8, 7]
+
+
+******** Parking Lot ********
+Enter max of car,car in soi,operation : 5 0 depart 3
+car 3 cannot depart : Soi Empty
+[]
+
+
+******** Parking Lot ********
+Enter max of car,car in soi,operation : 4 1,3,2 depart 1
+car 1 depart ! : Car 1 was remove
+[3, 2]
+
+******** Parking Lot ********
+Enter max of car,car in soi,operation : 6 2,3,5,7,8 depart 1
+car 1 cannot depart : Dont Have Car 1
+[2, 3, 5, 7, 8]
+
+
+
+
