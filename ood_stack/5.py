@@ -28,25 +28,14 @@ class Stack:
                 self.items=[]
         else:
                 self.items=data[1].split(',')
-
- 
-
-        if data[2]=='arrive':
-
-                
+        if data[2]=='arrive':             
             if self.size()==int(data[0]) :
-                print(f'car {data[3]} cannot arrive : Soi Full')
-                
+                print(f'car {data[3]} cannot arrive : Soi Full')            
             elif data[3] in self.items:
-                print(f'car {data[3]} already in soi')
-
-            
+                print(f'car {data[3]} already in soi')           
             else:
                 self.push(data[3])
                 print(f'car {data[3]} arrive! : Add Car {data[3]}')
-
-
-
         elif data[2]=='depart':
             if  data[3] in self.items:
                 print(f'car {data[3]} depart ! : Car {data[3]} was remove')
